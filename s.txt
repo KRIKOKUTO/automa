@@ -1,0 +1,10 @@
+//$this->load->model("pruebamodelo");
+		//$this->pruebamodelo->deletedb($catalogo);
+        $totalRegistros = $this->db->count_all($catalogo);
+
+        if ($totalRegistros > 0) {
+            $this->db->empty_table($catalogo);
+        }
+
+//$arr=$this->pruebamodelo->insertardb($Catalogo,$data);
+                $this->db->insert($catalogo, $data);
